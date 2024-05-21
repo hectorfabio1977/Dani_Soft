@@ -1,0 +1,16 @@
+{% extends 'Base.html' %}
+
+
+{% block title %}Formulario Clientes{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <h1>Formulario Clientes</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+{% endblock %}

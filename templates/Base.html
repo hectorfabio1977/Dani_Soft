@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Título de tu sitio{% endblock %}</title>
+</head>
+<body>
+
+<div class="menu">
+    <a href="#home">Inicio</a>
+    <div class="dropdown">
+        <button class="dropbtn">Productos
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#productos">Todos los Productos</a>
+            <a href="#nuevo-producto">Nuevo Producto</a>
+            <!-- Agrega más opciones de menú aquí -->
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropbtn">Categorías
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="#categorias">Todas las Categorías</a>
+            <a href="#nueva-categoria">Nueva Categoría</a>
+            <!-- Agrega más opciones de menú aquí -->
+        </div>
+    </div>
+    <!-- Agrega más menús o submenús aquí -->
+</div>
+
+<div class="contenido">
+    {% block content %}
+    {% endblock %}
+</div>
+
+</body>
+</html>
